@@ -20,11 +20,11 @@ class About extends Component {
     render() { //This could probably be done better as a ".map" method
         return(
             <>
-                <LeftItem data={this.props.data[0]}/>
-                <RightItem data={this.props.data[1]}/>
-                <div onClick={this.toggleModal}> {/*For some reason, can't get "onClick" to be tied directly to the <LeftItem> inside here, so had to wrap <Left> item in a <div> that had the "onClick"*/} 
+                <LeftItem data={this.props.data}/>
+                {/*<RightItem data={this.props.data[1]}/>
+                <div onClick={this.toggleModal}> {/*For some reason, can't get "onClick" to be tied directly to the <LeftItem> inside here, so had to wrap <Left> item in a <div> that had the "onClick" 
                     <LeftItem data={this.props.data[2]}/>
-                </div>
+                </div>*/}
 
                 <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
                     <ModalHeader toggle={this.toggleModal}>Contact Us</ModalHeader>
